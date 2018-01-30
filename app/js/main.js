@@ -1,12 +1,16 @@
 var s = Snap("#svg");
-var cp = s.circle(130,130,127).attr({ 
-	fill: "none", 
-	stroke: "#000",
-	strokeWidth: 8 
-});
+var cx = 130;
+var cy = 130;
+var r  = 130;
+function circlePath(cx, cy, r){
+    return 'M '+cx+' '+cy+' m -'+r+', 0 a '+r+','+r+' 0 1,0 '+(r*2)+',0 a '+r+','+r+' 0 1,0 -'+(r*2)+',0';
+}
 
-var cp2 = s.circle(130,130,127).attr({ 
-	fill: "none", 
-	stroke: "yellow",
-	strokeWidth: 4 
-});
+// function animateLoop(){
+// 	$("#outline").css("stroke-dasharray", $(".path")[0].getTotalLength());
+// 		$(".path").css("stroke-dashoffset", $(".path")[0].getTotalLength());
+// 		$(".path").animate({
+// 		strokeDashoffset: 0
+// 	}, 10000);
+// }
+// animateLoop();
