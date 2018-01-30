@@ -10,20 +10,31 @@ html, body {
 	left: 50%;*/
 	width: 266px;
 	height: 268px;
-	background: #999;
+	/*background: #999;*/
 	border-radius: 50%;
 	/*margin: -130px 0 0 -130px;*/
-	transform: rotateZ(90deg);
+	transform: rotateZ(90deg) scale(.9);
+	box-shadow: 0 0 5px 3px #f00 ;
+	animation: dasha 3s linear infinite;
 }
 
 .path {
-	stroke-dasharray: 1000;
+	stroke-dasharray: 150;
 	stroke-dashoffset: 1000;
-	animation: dash 10s linear infinite;
+	animation: dash 3s linear infinite;
   }
 
+ .red { stroke-dasharray: 50; }
+
   @keyframes dash {
-  to {
-    stroke-dashoffset: 750;
+  0 {
+    stroke-dasharray: 0; 
   }
+  100% {stroke-dasharray: -1000; stroke-dashoffset:-1000; }
+}
+
+ @keyframes dasha {
+  0 {box-shadow: 0 0 5px 3px #f00}
+  50% {box-shadow: 0 0 35px 10px #f00; transform: scale(1);}
+  100% {box-shadow: 0 0 5px 3px #f00}
 }
