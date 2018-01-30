@@ -9,7 +9,7 @@ function circlePath(cx, cy, r){
 var total = circlePath();
 s.path(total).attr({
 	fill: 'none',
-	stroke:'#0ff',
+	stroke:'#000',
 	strokeWidth:5
 })
 
