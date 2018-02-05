@@ -26,14 +26,14 @@ html, body {
 
  .red { stroke-dasharray: 50; }
 
-  @keyframes dash {
+@keyframes dash {
   0 {
     stroke-dasharray: 0; 
   }
   100% {stroke-dasharray: -1000; stroke-dashoffset:-1000; }
 }
 
- @keyframes dasha {
+@keyframes dasha {
   0 {box-shadow: 0 0 5px 3px #f00}
   50% {box-shadow: 0 0 35px 10px #f00; transform: scale(1);}
   100% {box-shadow: 0 0 5px 3px #f00}
